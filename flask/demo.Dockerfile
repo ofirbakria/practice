@@ -7,14 +7,14 @@ RUN apt update && \
     apt install -y curl && \
     apt install -y wget && \
     apt install -y git  
-
+    
 # Create a directory and set it as the working directory
 WORKDIR /app     
 
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
