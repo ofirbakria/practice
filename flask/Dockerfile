@@ -13,7 +13,7 @@ WORKDIR /app
 
 # Copy the current directory contents into the container at /app
 COPY . /app
-COPY ./requirements.txt ./requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
