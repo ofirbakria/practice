@@ -11,6 +11,7 @@ RUN apt update && \
 # Create a directory and set it as the working directory
 WORKDIR /app     
 
+COPY requirements.txt .
 # Copy the current directory contents into the container at /app
 COPY . /app
 
