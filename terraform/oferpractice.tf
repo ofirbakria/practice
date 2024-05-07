@@ -1,3 +1,4 @@
+
 # Define AWS provider
 provider "aws" {
   region = "eu-west-1"
@@ -12,7 +13,7 @@ resource "aws_instance" "ofer_practice" {
   associate_public_ip_address = true
   vpc_security_group_ids      = ["sg-01dfcb524956905ff"]
 
-  user_data = file("user_data.sh")
+  user_data = file("./terraform/user_data.sh")
   tags = {
     Name = "demo"
   }
