@@ -13,7 +13,7 @@ resource "aws_instance" "ofer_practice" {
   associate_public_ip_address = true
   vpc_security_group_ids      = ["sg-01dfcb524956905ff"]
 
-  user_data = file("/home/ubuntu/workspace/oferPractice/terraform/user_data.sh")
+  user_data = file("user_data.sh")
   tags = {
     Name = "demo"
   }
